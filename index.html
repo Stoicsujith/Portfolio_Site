@@ -32,8 +32,8 @@
   </nav>
 
   <!-- Header -->
-  <header class="parallax" data-aos="fade-down" style="padding-top: 5rem;">
-    <div class="header-content" style="text-align:center;">
+  <header class="parallax" data-aos="fade-down" style="text-align:center;">
+    <div class="header-content">
       <h1><span id="typed"></span></h1>
       <p>Aspiring Data Analyst | Biotechnology Graduate</p>
       <div class="header-contacts">
@@ -96,7 +96,7 @@
     <ul>
       <li><a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">Genomic Data Analysis Paper</a></li>
     </ul>
-  </section> 
+  </section>
 
   <!-- My Journey -->
   <section id="timeline" data-aos="fade-up">
@@ -146,17 +146,18 @@
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 60; // nav height buffer
         const sectionHeight = section.clientHeight;
-        if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
           current = section.getAttribute('id');
         }
       });
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if(link.getAttribute('href') === '#' + current){
+        if (link.getAttribute('href') === '#' + current) {
           link.classList.add('active');
         }
       });
     });
   </script>
+
 </body>
 </html>
