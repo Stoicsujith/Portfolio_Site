@@ -1,0 +1,161 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fixed top nav basic styling */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  font-weight: 600;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00ddff;
+  background: rgba(0, 221, 255, 0.1);
+}
+
+/* To offset the fixed nav height for section anchors */
+section {
+  padding-top: 4.5rem;
+  margin-top: 3rem;
+}
+
+/* Header */
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+.header-contacts a {
+  color: #00ddff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+}
+
+.header-contacts a:hover {
+  text-decoration: underline;
+}
+
+/* Skills list */
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills-list li {
+  background: #222;
+  color: #00ddff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Cards for projects */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(0, 221, 255, 0.3);
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.hover-card:hover {
+  box-shadow: 0 0 20px #00ddff;
+  transform: translateY(-5px);
+  color: #00ddff;
+}
+
+/* Certificates container */
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.certificates-container img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.certificates-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #00ddff;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #0099bb;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  background: #121212;
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .certificates-container {
+    justify-content: center;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
