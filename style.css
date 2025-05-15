@@ -5,9 +5,12 @@ html {
 
 /* Body styles */
 body {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 1rem;
   background-color: #f0f0f0; /* soft gray */
   color: #121212; /* dark text */
+  font-family: Arial, sans-serif;
 }
 
 /* To offset the fixed nav height for section anchors */
@@ -23,6 +26,7 @@ header.parallax {
   padding: 120px 20px 60px;
   margin-top: 3rem;
   text-align: center;
+  border-radius: 8px;
 }
 
 header.parallax p {
@@ -33,6 +37,7 @@ header.parallax p {
 .header-content h1 {
   font-size: 3rem;
   margin-bottom: 0.25rem;
+  color: white; /* better contrast on gradient */
 }
 
 .header-contacts a {
@@ -53,6 +58,7 @@ header.parallax p {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 .skills-list li {
@@ -136,16 +142,20 @@ footer {
   padding: 1rem 0;
   color: #aaa;
   text-align: center;
+  border-radius: 8px;
 }
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .skills-list {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .certificates-container {
     justify-content: center;
+    flex-direction: column;
   }
 
   .card {
