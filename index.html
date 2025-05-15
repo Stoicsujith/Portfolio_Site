@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio of Sujith MP - Aspiring Data Analyst" />
-  <meta property="og:title" content="Sujith MP Portfolio" />
-  <meta property="og:description" content="Explore Sujith's projects, resume, blog, and more." />
+  <meta property="og:title" content="My Portfolio" />
+  <meta property="og:description" content="Explore projects, resume, blog, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="your-image-link.jpg" />
-  <meta name="author" content="Sujith MP" />
-  <title>Sujith MP | Portfolio</title>
+  <title>Sujith MP Portfolio</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
@@ -38,9 +37,9 @@
       <h1><span id="typed"></span></h1>
       <p>Aspiring Data Analyst | Biotechnology Graduate</p>
       <div class="header-contacts">
-        <a href="mailto:sujithmp004@gmail.com" aria-label="Email Sujith">📧 Email</a> |
-        <a href="https://www.linkedin.com/in/sujith-mp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">💼 LinkedIn</a> |
-        <a href="https://github.com/Stoicsujith" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">💻 GitHub</a>
+        <a href="mailto:sujithmp004@gmail.com">📧 Email</a> |
+        <a href="https://www.linkedin.com/in/sujith-mp" target="_blank">💼 LinkedIn</a> |
+        <a href="https://github.com/Stoicsujith" target="_blank">💻 GitHub</a>
       </div>
     </div>
   </header>
@@ -69,7 +68,7 @@
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
 
-    <a href="G_Quadreplex.html" target="_blank" class="card hover-card project-link" rel="noopener noreferrer">
+    <a href="G_Quadreplex.html" target="_blank" class="card hover-card project-link">
       <h3>Genome Data Analysis</h3>
       <p>Identified bacterial DNA patterns using Python and R.</p>
     </a>
@@ -84,10 +83,10 @@
   <section id="certificates" data-aos="fade-up">
     <h2>Certificates</h2>
     <div class="certificates-container">
-      <img src="Excel Fundamentals.jpg" alt="Excel Fundamentals Certificate" />
-      <img src="Python.jpg" alt="Python Certificate" />
-      <img src="Prompt Engineering.jpg" alt="Prompt Engineering Certificate" />
-      <img src="Introduction to Statistics.jpg" alt="Introduction to Statistics Certificate" />
+      <img src="Excel Fundamentals.jpg" alt="Certificate 1" />
+      <img src="Python.jpg" alt="Certificate 2" />
+      <img src="Promt Engineering.jpg" alt="Certificate 3" />
+      <img src="Introduction to Statistics.jpg" alt="Certificate 4" />
     </div>
   </section>
 
@@ -111,7 +110,7 @@
   <section id="blog" data-aos="fade-up">
     <h2>Blog</h2>
     <p>Visit my full blog for latest posts and insights:</p>
-    <a href="https://yourblogsite.com" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Visit My Blog">
+    <a href="https://yourblogsite.com" target="_blank" rel="noopener noreferrer" class="btn">
       🌐 Visit My Blog
     </a>
   </section>
@@ -119,9 +118,7 @@
   <!-- Resume -->
   <section id="resume" data-aos="fade-up">
     <h2>Resume</h2>
-    <a href="Resume.pdf" download class="btn" aria-label="Download Resume PDF">
-      📄 Download My Resume (PDF)
-    </a>
+    <a href="Resume.pdf" download class="btn">📄 Download My Resume (PDF)</a>
   </section>
 
   <!-- Footer -->
@@ -133,7 +130,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-
     new Typed('#typed', {
       strings: ["Sujith MP", "Data Analyst", "Biotech Enthusiast"],
       typeSpeed: 80,
@@ -141,14 +137,14 @@
       loop: true
     });
 
-    // Highlight active nav link
+    // Active menu link on scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 60;
+        const sectionTop = section.offsetTop - 60; // nav height buffer
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
           current = section.getAttribute('id');
@@ -156,7 +152,7 @@
       });
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        if (link.getAttribute('href') === '#' + current) {
           link.classList.add('active');
         }
       });
