@@ -3,57 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
+  <meta name="description" content="Portfolio of Sujith MP - Aspiring Data Analyst" />
+  <meta property="og:title" content="My Portfolio" />
+  <meta property="og:description" content="Explore projects, resume, blog, and more." />
+  <meta property="og:type" content="website" />
+  <title>Sujith MP Portfolio</title>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Typing effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Dark mode toggle -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Sujith MP</h1>
+
+  <!-- Dark Mode Toggle -->
+  <button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px;">🌙 Toggle Dark Mode</button>
+
+  <!-- Header -->
+  <header class="parallax" data-aos="fade-down">
+    <h1><span id="typed"></span></h1>
     <p>Aspiring Data Analyst | Biotechnology Graduate</p>
   </header>
 
+  <!-- About -->
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>I have an M.Sc. in Biotechnology and am transitioning into data science. Skilled in Python, R, Excel, and genomic data analysis.</p>
   </section>
 
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
+  <!-- Certificates -->
+  <section id="certificates" data-aos="fade-up">
+    <h2>Certificates</h2>
+    <div class="certificates-container">
+      <img src="Excel Fundamentals.jpg" alt="Certificate 1" />
+      <img src="Python.jpg" alt="Certificate 2" />
+      <img src="Promt Engineering.jpg" alt="Certificate 2" />
+      <img src="Introduction to Statistics.jpg" alt="Certificate 2" />
+      <!-- Add more certificate images here -->
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" data-aos="fade-up">
+    <h2>Publications</h2>
     <ul>
-      <li><strong>Genome Data Analysis:</strong> Identified bacterial DNA patterns using Python and R.</li>
+      <li><a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">Genomic Data Analysis Paper</a></li>
     </ul>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="card hover-card">
+      <h3>Genome Data Analysis</h3>
+      <p>Identified bacterial DNA patterns using Python and R.</p>
+    </div>
+    <div class="card hover-card">
+      <h3>Monkeypox Research Repository</h3>
+      <p><a href="https://github.com/Stoicsujith/Monkeypox-Research" target="_blank">View on GitHub</a></p>
+    </div>
+  </section>
+
+  <!-- Skills -->
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
-    <p>Languages: Python, C</p>
-    <p>Data management: Excel</p>
-    <p>Soft skills: Analytical skills, Critical Thinking, Problem solving</p>
+    <label>Python</label>
+    <div class="bar"><div class="progress" style="width: 85%;"></div></div>
+
+    <label>R</label>
+    <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+
+    <label>Excel</label>
+    <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+
+    <label>Soft Skills</label>
+    <ul>
+      <li>Analytical Thinking</li>
+      <li>Critical Thinking</li>
+      <li>Problem Solving</li>
+    </ul>
   </section>
 
+  <!-- Resume -->
   <section id="resume" data-aos="fade-up">
     <h2>Resume</h2>
-    <a href="resume.pdf" download>Download My Resume (PDF)</a>
+    <a href="Resume.pdf" download class="btn">📄 Download My Resume (PDF)</a>
   </section>
 
+  <!-- Testimonials -->
+  <section id="testimonials" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <blockquote>"Sujith is dedicated and detail-oriented." – Professor A</blockquote>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" data-aos="fade-up">
+    <h2>Blog</h2>
+    <ul>
+      <li><a href="#">5 Steps I Took to Transition into Data Analytics</a></li>
+    </ul>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" data-aos="fade-up">
+    <h2>My Journey</h2>
+    <ul>
+      <li><strong>2023:</strong> Completed M.Sc. in Biotechnology</li>
+    </ul>
+  </section>
+
+
+  <!-- Gallery -->
+  <section id="gallery" data-aos="fade-up">
+    <h2>Portfolio Gallery</h2>
+    <img src="project1.png" alt="Project Screenshot" width="300" class="hover-card" />
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" data-aos="fade-up">
+    <h2>Resources</h2>
+    <a href="dataset.csv" download>📊 Download Dataset</a>
+  </section>
+
+  <!-- Contact -->
   <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>Email: sujithmp004@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div>
+      <a href="mailto:sujithmp004@gmail.com">Email</a> |
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/Stoicsujith" target="_blank">GitHub</a> |
+    </div>
   </section>
 
+  <!-- Map -->
+  <section id="map" data-aos="fade-up">
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <!-- Footer -->
   <footer data-aos="fade-up">
-    <p>&copy; 2025 Sujith MP</p>
+    <p>&copy; 2025 Sujith MP. All rights reserved.</p>
   </footer>
 
-  <!-- AOS JS -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+    new Typed('#typed', {
+      strings: ["Sujith MP", "Data Analyst", "Biotech Enthusiast"],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true
+    });
   </script>
 </body>
 </html>
