@@ -1,3 +1,10 @@
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Base Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -8,6 +15,14 @@ body {
   line-height: 1.6;
   transition: background 0.4s, color 0.4s;
   scroll-padding-top: 120px; /* Important for anchor scroll offset */
+}
+
+/* Accessibility Focus Styles */
+a:focus,
+.btn:focus,
+.header-contacts a:focus {
+  outline: 2px dashed #00ddff;
+  outline-offset: 4px;
 }
 
 /* Dark mode link colors */
@@ -22,10 +37,10 @@ header.parallax {
   text-align: center;
   padding: 100px 20px;
   position: relative;
-  /* Added background-clip for compatibility */
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  box-sizing: border-box;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Header Contact Links */
@@ -33,7 +48,7 @@ header.parallax {
   margin: 0 10px;
   font-size: 1.1em;
   display: inline-block;
-  color: #00ddff; /* consistent with header gradient */
+  color: #00ddff;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -44,12 +59,13 @@ header.parallax {
 }
 
 /* Buttons and Links */
-a {
+a, .header-contacts a {
   color: #00ddff;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-a:hover {
+a:hover, .header-contacts a:hover {
   text-decoration: underline;
   color: #ff00d4;
 }
@@ -79,7 +95,7 @@ section {
 
 /* Hover Cards */
 .hover-card {
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -126,11 +142,11 @@ section {
 }
 
 .skills-list li {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   padding: 12px 20px;
   border-radius: 10px;
   font-size: 1em;
-  color: #fff;
+  color: #e0e0e0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
@@ -195,5 +211,10 @@ footer {
   .skills-list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .skills-list li {
+    width: 100%;
+    text-align: center;
   }
 }
