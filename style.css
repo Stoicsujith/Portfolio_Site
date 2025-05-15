@@ -44,8 +44,11 @@ section {
   margin-bottom: 0.25rem;
   background: linear-gradient(90deg, #ff00d4, #00ddff);
   -webkit-background-clip: text;
+  background-clip: text; /* standard property */
   -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback */
 }
+
 
 .header-contacts a {
   color: #00ddff;
