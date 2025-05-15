@@ -1,30 +1,23 @@
-/* Global reset and box-sizing */
-* {
-  box-sizing: border-box;
-}
-
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
+/* Body padding to prevent edge-to-edge layout */
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #121212;
-  color: #ddd;
-  font-family: sans-serif;
+  padding: 0 1rem;
 }
 
-main {
-  flex: 1;
+/* To offset the fixed nav height for section anchors */
+section {
+  padding-top: 4.5rem;
+  margin-top: 3rem;
 }
 
 /* Header */
 header.parallax {
   background: linear-gradient(135deg, #ff00d4, #00ddff);
-  color: black;
+  color: gray;
   padding: 120px 20px 60px;
   margin-top: 3rem;
   text-align: center;
@@ -44,12 +37,6 @@ header.parallax {
 
 .header-contacts a:hover {
   text-decoration: underline;
-}
-
-/* Section spacing */
-section {
-  padding-top: 4.5rem;
-  margin-top: 3rem;
 }
 
 /* Skills list */
@@ -89,20 +76,23 @@ section {
   color: #00ddff;
 }
 
-/* Certificates container */
+/* Certificates container - updated */
 .certificates-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: center;
   background-color: #111;
   padding: 1rem;
   border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .certificates-container img {
+  flex: 1 1 200px;
   max-width: 200px;
-  max-height: 150px;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
@@ -135,7 +125,9 @@ section {
 footer {
   font-size: 0.9rem;
   background: #121212;
+  margin-top: 3rem;
   padding: 1rem 0;
+  color: #aaa;
   text-align: center;
 }
 
@@ -151,14 +143,5 @@ footer {
 
   .card {
     padding: 1rem;
-  }
-
-  .header-content h1 {
-    font-size: 2rem;
-  }
-
-  .header-contacts a {
-    display: block;
-    margin: 0.3rem 0;
   }
 }
