@@ -1,102 +1,40 @@
-/* Base Styles */
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #000;
-  color: #e0e0e0;
-  line-height: 1.6;
-}
+/* Removed nav styles */
 
-/* Headings */
-h1, h2, h3 {
-  color: #00ddff;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* Navigation Bar */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #121212;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-  font-weight: 600;
-}
-
-nav a {
-  color: #ccc;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  color: #00ddff;
-  background: rgba(0, 221, 255, 0.1);
+/* To offset the fixed nav height for section anchors */
+/* You can adjust or remove this if no fixed nav exists */
+section {
+  padding-top: 4.5rem;
+  margin-top: 3rem;
 }
 
 /* Header */
-header.parallax {
-  background: linear-gradient(135deg, #ff00d4, #00ddff);
-  color: white;
-  padding: 120px 20px 60px;
-  margin-top: 3rem;
-  text-align: center;
-}
-
 .header-content h1 {
   font-size: 3rem;
   margin-bottom: 0.25rem;
 }
 
-.header-contacts {
-  margin-top: 1rem;
-}
-
 .header-contacts a {
-  margin: 0 10px;
-  font-size: 1.1rem;
   color: #00ddff;
-  font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  margin: 0 0.5rem;
+  font-weight: 600;
 }
 
 .header-contacts a:hover {
   text-decoration: underline;
 }
 
-/* Section Layout */
-section {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
-  padding-top: 4.5rem;
-  scroll-margin-top: 4.5rem;
-}
-
-/* Skills */
+/* Skills list */
 .skills-list {
-  list-style: none;
+  list-style-type: none;
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -106,24 +44,11 @@ section {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
 }
 
-.skills-list li:hover {
-  transform: scale(1.05);
-}
-
-/* Projects & Hover Cards */
-.project-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.hover-card,
+/* Cards for projects */
 .card {
-  background: #1e1e1e;
+  background-color: #1e1e1e;
   border-radius: 8px;
   padding: 1rem 1.5rem;
   margin: 1rem 0;
@@ -134,19 +59,19 @@ section {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.hover-card:hover,
-.card:hover {
+.card:hover,
+.hover-card:hover {
   box-shadow: 0 0 20px #00ddff;
   transform: translateY(-5px);
   color: #00ddff;
 }
 
-/* Certificates */
+/* Certificates container */
 .certificates-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   background-color: #111;
   padding: 1rem;
   border-radius: 8px;
@@ -155,34 +80,17 @@ section {
 .certificates-container img {
   max-width: 200px;
   height: auto;
-  object-fit: contain;
   border-radius: 6px;
-  transition: transform 0.3s;
   box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
+  object-fit: contain;
+  transition: transform 0.3s;
 }
 
 .certificates-container img:hover {
   transform: scale(1.05);
 }
 
-/* Blog Section */
-#blog p {
-  text-align: center;
-}
-
-#blog .btn {
-  display: inline-block;
-  margin: 10px auto;
-}
-
-/* Resume Download */
-#resume .btn {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-/* Button Styles */
+/* Buttons */
 .btn {
   display: inline-block;
   background: #00ddff;
@@ -199,72 +107,17 @@ section {
   color: #fff;
 }
 
-/* Timeline */
-#timeline ul {
-  list-style: none;
-  padding: 0;
-}
-
-#timeline li {
-  padding: 10px 0;
-  border-left: 3px solid #00ddff;
-  padding-left: 15px;
-  position: relative;
-  color: #e0e0e0;
-}
-
-#timeline li::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background: #00ddff;
-  position: absolute;
-  left: -6px;
-  top: 12px;
-  border-radius: 50%;
-}
-
 /* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   background: #121212;
-  color: #aaa;
   margin-top: 3rem;
+  padding: 1rem 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .skills-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav {
-    gap: 1rem;
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .certificates-container img {
-    max-width: 90%;
-    height: auto;
-  }
-
-  header.parallax {
-    padding: 80px 20px 40px;
-  }
-
-  .header-content h1 {
-    font-size: 2rem;
-  }
-}
-
+/* Responsive tweaks */
 @media (max-width: 600px) {
-  .card {
-    padding: 1rem;
-  }
+  /* nav styles removed */
 
   .skills-list {
     justify-content: center;
@@ -272,5 +125,9 @@ footer {
 
   .certificates-container {
     justify-content: center;
+  }
+
+  .card {
+    padding: 1rem;
   }
 }

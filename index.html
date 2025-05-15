@@ -13,56 +13,11 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: #121212;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-      font-weight: 600;
-    }
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      padding: 0.5rem 0.75rem;
-      border-radius: 4px;
-      transition: background 0.3s, color 0.3s;
-    }
-    nav a:hover,
-    nav a.active {
-      color: #00ddff;
-      background: rgba(0, 221, 255, 0.1);
-    }
-    section {
-      padding-top: 4.5rem;
-      margin-top: 3rem;
-    }
-  </style>
 
   <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-
-  <!-- Navigation (Unchanged) -->
-  <nav id="navbar">
-    <a href="#about" class="nav-link">About</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#certificates" class="nav-link">Certificates</a>
-    <a href="#publications" class="nav-link">Publications</a>
-    <a href="#timeline" class="nav-link">My Journey</a>
-    <a href="#blog" class="nav-link">Blog</a>
-    <a href="#resume" class="nav-link">Resume</a>
-  </nav>
 
   <!-- Header -->
   <header class="parallax" data-aos="fade-down" style="padding-top: 5rem;">
@@ -100,10 +55,12 @@
   <!-- Projects -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
+
     <a href="G_Quadreplex.html" target="_blank" class="card hover-card project-link">
       <h3>Genome Data Analysis</h3>
       <p>Identified bacterial DNA patterns using Python and R.</p>
     </a>
+
     <a href="https://github.com/Stoicsujith/Monkeypox-Research" target="_blank" rel="noopener noreferrer" class="card hover-card project-link">
       <h3>Monkeypox Research Repository</h3>
       <p>View the full project code and data on GitHub.</p>
@@ -114,10 +71,10 @@
   <section id="certificates" data-aos="fade-up">
     <h2>Certificates</h2>
     <div class="certificates-container">
-      <img src="Excel Fundamentals.jpg" alt="Excel Certificate" />
-      <img src="Python.jpg" alt="Python Certificate" />
-      <img src="Prompt Engineering.jpg" alt="Prompt Engineering Certificate" />
-      <img src="Introduction to Statistics.jpg" alt="Statistics Certificate" />
+      <img src="Excel Fundamentals.jpg" alt="Certificate 1" />
+      <img src="Python.jpg" alt="Certificate 2" />
+      <img src="Prompt Engineering.jpg" alt="Certificate 3" />
+      <img src="Introduction to Statistics.jpg" alt="Certificate 4" />
     </div>
   </section>
 
@@ -125,15 +82,11 @@
   <section id="publications" data-aos="fade-up">
     <h2>Publications</h2>
     <ul>
-      <li>
-        <a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">
-          Genomic Data Analysis Paper
-        </a>
-      </li>
+      <li><a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">Genomic Data Analysis Paper</a></li>
     </ul>
-  </section>
+  </section> 
 
-  <!-- Timeline -->
+  <!-- My Journey -->
   <section id="timeline" data-aos="fade-up">
     <h2>My Journey</h2>
     <ul>
@@ -172,26 +125,7 @@
       loop: true
     });
 
-    // Active nav on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 60;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    });
+    // Active menu link on scroll - removed since nav is gone
   </script>
 </body>
 </html>
