@@ -3,26 +3,36 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #000; /* Black background */
+  background: #000;
   color: #e0e0e0;
   line-height: 1.6;
-  transition: background 0.4s, color 0.4s;
+  scroll-behavior: smooth;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #00ddff;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* Navigation Bar */
 nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #121212;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   padding: 1rem;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   font-weight: 600;
-  font-size: 1rem;
 }
+
 nav a {
   color: #ccc;
   text-decoration: none;
@@ -30,103 +40,46 @@ nav a {
   border-radius: 4px;
   transition: background 0.3s, color 0.3s;
 }
+
 nav a:hover,
 nav a.active {
   color: #00ddff;
   background: rgba(0, 221, 255, 0.1);
 }
 
-/* Header with Gradient */
+/* Header */
 header.parallax {
   background: linear-gradient(135deg, #ff00d4, #00ddff);
   color: white;
+  padding: 120px 20px 60px;
+  margin-top: 3rem;
   text-align: center;
-  padding: 120px 20px 60px; /* increased top padding to offset nav */
-  position: relative;
-  margin-top: 3rem; /* small margin to separate from nav */
 }
 
-/* Header Contact Links */
+.header-content h1 {
+  font-size: 2.5rem;
+}
+
+.header-contacts {
+  margin-top: 1rem;
+}
+
 .header-contacts a {
   margin: 0 10px;
-  font-size: 1.1em;
-  display: inline-block;
+  font-size: 1.1rem;
   color: white;
   transition: color 0.3s ease;
 }
+
 .header-contacts a:hover {
   color: #00ddff;
 }
 
-/* Buttons and Links */
-a {
-  color: #00ddff;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #2b6777;
-  color: white;
-  border-radius: 6px;
-  margin-top: 10px;
-  transition: background 0.3s;
-  text-align: center;
-}
-
-.btn:hover {
-  background: #52ab98;
-}
-
 /* Section Layout */
 section {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 900px;
+  margin: 60px auto;
   padding: 0 20px;
-  padding-top: 3rem; /* space from fixed nav */
-}
-
-/* Hover Cards */
-.hover-card {
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin: 10px 0;
-  background: #111;
-  color: #e0e0e0;
-}
-
-.hover-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 221, 255, 0.3);
-}
-
-/* Certificates Gallery */
-.certificates-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.certificates-container img {
-  max-width: 200px;
-  height: 140px;          /* fixed height to keep uniform size */
-  object-fit: contain;    /* keep aspect ratio, don't stretch */
-  margin: 10px;
-  border-radius: 8px;
-  transition: transform 0.3s;
-  box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
-  image-rendering: -webkit-optimize-contrast; /* improve sharpness on some browsers */
-  background-color: #111; /* dark bg behind images for clarity */
-}
-
-.certificates-container img:hover {
-  transform: scale(1.05);
 }
 
 /* Skills */
@@ -135,8 +88,8 @@ section {
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
 }
 
 .skills-list li {
@@ -153,12 +106,79 @@ section {
   transform: scale(1.05);
 }
 
-/* Blog Article */
-#blog article {
-  padding: 15px;
-  border-left: 4px solid #52ab98;
-  background: rgba(255, 255, 255, 0.05);
+/* Projects & Hover Cards */
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hover-card {
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 221, 255, 0.3);
+}
+
+/* Certificates */
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificates-container img {
+  max-width: 200px;
+  height: 140px;
+  object-fit: contain;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
+  background-color: #111;
+}
+
+.certificates-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Blog Section */
+#blog p {
+  text-align: center;
+}
+
+#blog .btn {
+  display: inline-block;
+  margin: 10px auto;
+}
+
+/* Resume Download */
+#resume .btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  background: #2b6777;
+  color: white;
   border-radius: 6px;
+  text-align: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #52ab98;
 }
 
 /* Timeline */
@@ -196,18 +216,28 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    gap: 1rem;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .certificates-container img {
+    max-width: 90%;
+    height: auto;
+  }
+
   header.parallax {
     padding: 80px 20px 40px;
   }
 
-  .certificates-container img {
-    max-width: 100%;
-    height: auto;  /* Let height adjust on smaller screens */
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
+  .header-content h1 {
+    font-size: 2rem;
   }
 }
