@@ -3,8 +3,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f7f8;
-  color: #333;
+  background: #000; /* Black background */
+  color: #e0e0e0;
   line-height: 1.6;
   transition: background 0.4s, color 0.4s;
 }
@@ -16,26 +16,25 @@ body {
 }
 
 .dark-mode header {
-  background: #1f1f1f;
+  background: linear-gradient(135deg, #ff00d4, #00ddff);
 }
 
 .dark-mode a {
   color: #90caf9;
 }
 
-/* Header with Parallax */
+/* Header with Gradient */
 header.parallax {
-  background: url('header-bg.jpg') no-repeat center center / cover;
+  background: linear-gradient(135deg, #ff00d4, #00ddff);
   color: white;
   text-align: center;
   padding: 100px 20px;
   position: relative;
-  background-attachment: fixed;
 }
 
 /* Buttons and Links */
 a {
-  color: #2b6777;
+  color: #00ddff;
   text-decoration: none;
 }
 
@@ -71,11 +70,12 @@ section {
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
   margin: 10px 0;
+  background: #111;
 }
 
 .hover-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 /* Certificates Gallery */
@@ -92,14 +92,14 @@ section {
 
 /* Progress Bars */
 .bar {
-  background: #e0e0e0;
+  background: #333;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
 }
 
 .progress {
-  background: #2b6777;
+  background: #00ddff;
   height: 18px;
   border-radius: 10px 0 0 10px;
 }
@@ -111,6 +111,8 @@ form input, form textarea {
   margin-bottom: 10px;
   border: 1px solid #aaa;
   border-radius: 5px;
+  background: #111;
+  color: white;
 }
 
 form button {
@@ -134,7 +136,7 @@ form button:hover {
 
 #timeline li {
   padding: 10px 0;
-  border-left: 3px solid #2b6777;
+  border-left: 3px solid #00ddff;
   padding-left: 15px;
   position: relative;
 }
@@ -143,7 +145,7 @@ form button:hover {
   content: '';
   width: 10px;
   height: 10px;
-  background: #2b6777;
+  background: #00ddff;
   position: absolute;
   left: -6px;
   top: 12px;
@@ -155,8 +157,8 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background: #f1f1f1;
-  color: #666;
+  background: #111;
+  color: #aaa;
 }
 
 .dark-mode footer {
