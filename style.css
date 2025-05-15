@@ -90,6 +90,32 @@ section {
   transform: scale(1.05);
 }
 
+/* Skills */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* optional: center align the items */
+}
+
+.skills-list li {
+  background: rgba(255, 255, 255, 0.1); /* lighter for visibility in dark mode */
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1em;
+  color: #fff; /* ensure it's readable on dark backgrounds */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+  transform: scale(1.05);
+}
+
+
+
 /* Blog */
 #blog ul {
   list-style: none;
