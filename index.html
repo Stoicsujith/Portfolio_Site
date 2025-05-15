@@ -4,17 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Portfolio of Sujith MP - Aspiring Data Analyst" />
-  <meta property="og:title" content="My Portfolio" />
-  <meta property="og:description" content="Explore projects, resume, blog, and more." />
+  <meta property="og:title" content="Sujith MP Portfolio" />
+  <meta property="og:description" content="Explore Sujith's projects, resume, blog, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="your-image-link.jpg" />
-  <title>Sujith MP Portfolio</title>
+  <meta name="author" content="Sujith MP" />
+  <title>Sujith MP | Portfolio</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-  <!-- Typed.js -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
@@ -32,14 +33,14 @@
   </nav>
 
   <!-- Header -->
-  <header class="parallax" data-aos="fade-down" style="text-align:center;">
+  <header class="parallax" data-aos="fade-down">
     <div class="header-content">
       <h1><span id="typed"></span></h1>
       <p>Aspiring Data Analyst | Biotechnology Graduate</p>
       <div class="header-contacts">
         <a href="mailto:sujithmp004@gmail.com" aria-label="Email Sujith">📧 Email</a> |
-        <a href="https://www.linkedin.com/in/sujith-mp" target="_blank" rel="noopener" aria-label="LinkedIn Profile">💼 LinkedIn</a> |
-        <a href="https://github.com/Stoicsujith" target="_blank" rel="noopener" aria-label="GitHub Profile">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/sujith-mp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">💼 LinkedIn</a> |
+        <a href="https://github.com/Stoicsujith" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">💻 GitHub</a>
       </div>
     </div>
   </header>
@@ -68,12 +69,12 @@
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
 
-    <a href="G_Quadreplex.html" target="_blank" class="hover-card" rel="noopener noreferrer">
+    <a href="G_Quadreplex.html" class="hover-card" target="_blank" rel="noopener noreferrer">
       <h3>Genome Data Analysis</h3>
       <p>Identified bacterial DNA patterns using Python and R.</p>
     </a>
 
-    <a href="https://github.com/Stoicsujith/Monkeypox-Research" target="_blank" rel="noopener noreferrer" class="hover-card">
+    <a href="https://github.com/Stoicsujith/Monkeypox-Research" class="hover-card" target="_blank" rel="noopener noreferrer">
       <h3>Monkeypox Research Repository</h3>
       <p>View the full project code and data on GitHub.</p>
     </a>
@@ -94,7 +95,11 @@
   <section id="publications" data-aos="fade-up">
     <h2>Publications</h2>
     <ul>
-      <li><a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">Genomic Data Analysis Paper</a></li>
+      <li>
+        <a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">
+          Genomic Data Analysis Paper
+        </a>
+      </li>
     </ul>
   </section>
 
@@ -118,7 +123,9 @@
   <!-- Resume -->
   <section id="resume" data-aos="fade-up">
     <h2>Resume</h2>
-    <a href="Resume.pdf" download class="btn" aria-label="Download My Resume (PDF)">📄 Download My Resume (PDF)</a>
+    <a href="Resume.pdf" class="btn" download aria-label="Download Resume PDF">
+      📄 Download My Resume (PDF)
+    </a>
   </section>
 
   <!-- Footer -->
@@ -130,6 +137,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
     new Typed('#typed', {
       strings: ["Sujith MP", "Data Analyst", "Biotech Enthusiast"],
       typeSpeed: 80,
@@ -137,14 +145,14 @@
       loop: true
     });
 
-    // Active menu link on scroll
+    // Highlight active nav link
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 60; // nav height buffer
+        const sectionTop = section.offsetTop - 60;
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
           current = section.getAttribute('id');
@@ -152,7 +160,7 @@
       });
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
+        if (link.getAttribute('href') === `#${current}`) {
           link.classList.add('active');
         }
       });
