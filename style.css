@@ -3,14 +3,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Body padding to prevent edge-to-edge layout */
+/* Body styles */
 body {
   padding: 0 1rem;
-  background-color: #f0f0f0; /* a nice soft gray */
-  color: #121212; /* default text color: dark for contrast */
+  background-color: #f0f0f0; /* soft gray */
+  color: #121212; /* dark text */
 }
-
-
 
 /* To offset the fixed nav height for section anchors */
 section {
@@ -26,10 +24,12 @@ header.parallax {
   margin-top: 3rem;
   text-align: center;
 }
+
 header.parallax p {
-  color: black;
-  font-weight: 600; /* optional: make it a bit bolder */
+  color: black; /* black text for subtitle */
+  font-weight: 600;
 }
+
 .header-content h1 {
   font-size: 3rem;
   margin-bottom: 0.25rem;
@@ -83,7 +83,7 @@ header.parallax p {
   color: #00ddff;
 }
 
-/* Certificates container - updated */
+/* Certificates container */
 .certificates-container {
   display: flex;
   flex-wrap: wrap;
