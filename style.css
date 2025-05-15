@@ -90,18 +90,50 @@ section {
   transform: scale(1.05);
 }
 
-/* Progress Bars */
-.bar {
-  background: #333;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 10px;
+/* Skills */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.progress {
-  background: #00ddff;
-  height: 18px;
-  border-radius: 10px 0 0 10px;
+.skills-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 150px;
+}
+
+.skill-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+
+/* Blog */
+#blog ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#blog li {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #52ab98;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+#blog a {
+  font-weight: bold;
+  color: #00ddff;
 }
 
 /* Contact Form */
