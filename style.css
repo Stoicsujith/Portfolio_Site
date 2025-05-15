@@ -115,10 +115,14 @@ section {
 
 .certificates-container img {
   max-width: 200px;
+  height: 140px;          /* fixed height to keep uniform size */
+  object-fit: contain;    /* keep aspect ratio, don't stretch */
   margin: 10px;
   border-radius: 8px;
   transition: transform 0.3s;
   box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
+  image-rendering: -webkit-optimize-contrast; /* improve sharpness on some browsers */
+  background-color: #111; /* dark bg behind images for clarity */
 }
 
 .certificates-container img:hover {
@@ -199,6 +203,7 @@ footer {
 
   .certificates-container img {
     max-width: 100%;
+    height: auto;  /* Let height adjust on smaller screens */
   }
 
   nav {
