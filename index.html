@@ -17,7 +17,6 @@
     html {
       scroll-behavior: smooth;
     }
-    /* Fixed top nav basic styling */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -42,7 +41,6 @@
       color: #00ddff;
       background: rgba(0, 221, 255, 0.1);
     }
-    /* To offset the fixed nav height for section anchors */
     section {
       padding-top: 4.5rem;
       margin-top: 3rem;
@@ -54,7 +52,7 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation (Unchanged) -->
   <nav id="navbar">
     <a href="#about" class="nav-link">About</a>
     <a href="#skills" class="nav-link">Skills</a>
@@ -102,12 +100,10 @@
   <!-- Projects -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
-
     <a href="G_Quadreplex.html" target="_blank" class="card hover-card project-link">
       <h3>Genome Data Analysis</h3>
       <p>Identified bacterial DNA patterns using Python and R.</p>
     </a>
-
     <a href="https://github.com/Stoicsujith/Monkeypox-Research" target="_blank" rel="noopener noreferrer" class="card hover-card project-link">
       <h3>Monkeypox Research Repository</h3>
       <p>View the full project code and data on GitHub.</p>
@@ -118,10 +114,10 @@
   <section id="certificates" data-aos="fade-up">
     <h2>Certificates</h2>
     <div class="certificates-container">
-      <img src="Excel Fundamentals.jpg" alt="Certificate 1" />
-      <img src="Python.jpg" alt="Certificate 2" />
-      <img src="Prompt Engineering.jpg" alt="Certificate 3" />
-      <img src="Introduction to Statistics.jpg" alt="Certificate 4" />
+      <img src="Excel Fundamentals.jpg" alt="Excel Certificate" />
+      <img src="Python.jpg" alt="Python Certificate" />
+      <img src="Prompt Engineering.jpg" alt="Prompt Engineering Certificate" />
+      <img src="Introduction to Statistics.jpg" alt="Statistics Certificate" />
     </div>
   </section>
 
@@ -129,16 +125,19 @@
   <section id="publications" data-aos="fade-up">
     <h2>Publications</h2>
     <ul>
-      <li><a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">Genomic Data Analysis Paper</a></li>
+      <li>
+        <a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">
+          Genomic Data Analysis Paper
+        </a>
+      </li>
     </ul>
-  </section> 
+  </section>
 
-  <!-- My Journey -->
+  <!-- Timeline -->
   <section id="timeline" data-aos="fade-up">
     <h2>My Journey</h2>
     <ul>
       <li><strong>2024:</strong> Completed M.Sc. in Biotechnology</li>
-      <!-- Add more timeline items here -->
     </ul>
   </section>
 
@@ -173,22 +172,22 @@
       loop: true
     });
 
-    // Active menu link on scroll
+    // Active nav on scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav a');
 
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 60; // nav height buffer
+        const sectionTop = section.offsetTop - 60;
         const sectionHeight = section.clientHeight;
-        if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
           current = section.getAttribute('id');
         }
       });
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if(link.getAttribute('href') === '#' + current){
+        if (link.getAttribute('href') === '#' + current) {
           link.classList.add('active');
         }
       });

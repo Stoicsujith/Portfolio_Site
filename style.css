@@ -1,4 +1,8 @@
 /* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -6,7 +10,6 @@ body {
   background: #000;
   color: #e0e0e0;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 /* Headings */
@@ -57,7 +60,8 @@ header.parallax {
 }
 
 .header-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
 }
 
 .header-contacts {
@@ -67,12 +71,14 @@ header.parallax {
 .header-contacts a {
   margin: 0 10px;
   font-size: 1.1rem;
-  color: white;
+  color: #00ddff;
+  font-weight: 600;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .header-contacts a:hover {
-  color: #00ddff;
+  text-decoration: underline;
 }
 
 /* Section Layout */
@@ -80,6 +86,8 @@ section {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
+  padding-top: 4.5rem;
+  scroll-margin-top: 4.5rem;
 }
 
 /* Skills */
@@ -89,15 +97,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .skills-list li {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 1em;
-  color: #fff;
+  background: #222;
+  color: #00ddff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
@@ -113,18 +121,24 @@ section {
   color: inherit;
 }
 
-.hover-card {
-  background: #111;
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 15px 0;
+.hover-card,
+.card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(0, 221, 255, 0.3);
+  color: #ddd;
+  text-decoration: none;
+  display: block;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.hover-card:hover {
+.hover-card:hover,
+.card:hover {
+  box-shadow: 0 0 20px #00ddff;
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 221, 255, 0.3);
+  color: #00ddff;
 }
 
 /* Certificates */
@@ -132,17 +146,19 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .certificates-container img {
   max-width: 200px;
-  height: 140px;
+  height: auto;
   object-fit: contain;
-  margin: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: transform 0.3s;
   box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
-  background-color: #111;
 }
 
 .certificates-container img:hover {
@@ -168,17 +184,19 @@ section {
 
 /* Button Styles */
 .btn {
-  padding: 10px 20px;
-  background: #2b6777;
-  color: white;
+  display: inline-block;
+  background: #00ddff;
+  color: #121212;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
-  text-align: center;
-  transition: background 0.3s;
   text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s;
 }
 
 .btn:hover {
-  background: #52ab98;
+  background: #0099bb;
+  color: #fff;
 }
 
 /* Timeline */
@@ -211,8 +229,9 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background: #111;
+  background: #121212;
   color: #aaa;
+  margin-top: 3rem;
 }
 
 /* Responsive */
@@ -239,5 +258,19 @@ footer {
 
   .header-content h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .certificates-container {
+    justify-content: center;
   }
 }
