@@ -6,7 +6,11 @@ html {
 /* Body padding to prevent edge-to-edge layout */
 body {
   padding: 0 1rem;
+  background-color: #f0f0f0; /* a nice soft gray */
+  color: #121212; /* default text color: dark for contrast */
 }
+
+
 
 /* To offset the fixed nav height for section anchors */
 section {
@@ -22,7 +26,10 @@ header.parallax {
   margin-top: 3rem;
   text-align: center;
 }
-
+header.parallax p {
+  color: black;
+  font-weight: 600; /* optional: make it a bit bolder */
+}
 .header-content h1 {
   font-size: 3rem;
   margin-bottom: 0.25rem;
