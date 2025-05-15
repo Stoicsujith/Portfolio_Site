@@ -7,31 +7,36 @@
   <meta property="og:title" content="My Portfolio" />
   <meta property="og:description" content="Explore projects, resume, blog, and more." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="your-image-link.jpg" />
   <title>Sujith MP Portfolio</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 
   <!-- Typing effect -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- Dark mode toggle -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 </head>
 <body>
 
-  <!-- Dark Mode Toggle -->
-  <button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px;">🌙 Toggle Dark Mode</button>
-
   <!-- Header -->
   <header class="parallax" data-aos="fade-down">
-    <h1><span id="typed"></span></h1>
-    <p>Aspiring Data Analyst | Biotechnology Graduate</p>
+    <div class="header-content">
+      <h1><span id="typed"></span></h1>
+      <p>Aspiring Data Analyst | Biotechnology Graduate</p>
+      
+      <!-- Contact Info in Header -->
+      <div class="header-contacts">
+        <a href="mailto:sujithmp004@gmail.com">📧 Email</a>
+        <a href="https://www.linkedin.com/in/sujith-mp" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/Stoicsujith" target="_blank">💻 GitHub</a>
+      </div>
+    </div>
   </header>
 
   <!-- About -->
@@ -46,9 +51,8 @@
     <div class="certificates-container">
       <img src="Excel Fundamentals.jpg" alt="Certificate 1" />
       <img src="Python.jpg" alt="Certificate 2" />
-      <img src="Promt Engineering.jpg" alt="Certificate 2" />
-      <img src="Introduction to Statistics.jpg" alt="Certificate 2" />
-      <!-- Add more certificate images here -->
+      <img src="Promt Engineering.jpg" alt="Certificate 3" />
+      <img src="Introduction to Statistics.jpg" alt="Certificate 4" />
     </div>
   </section>
 
@@ -58,7 +62,7 @@
     <ul>
       <li><a href="https://doi.org/another-publication-link" target="_blank" rel="noopener noreferrer">Genomic Data Analysis Paper</a></li>
     </ul>
-  </section>
+  </section> 
 
   <!-- Projects -->
   <section id="projects" data-aos="fade-up">
@@ -74,18 +78,18 @@
   </section>
 
   <!-- Skills -->
-<section id="skills" data-aos="fade-up">
-  <h2>Skills</h2>
-  <ul class="skills-list">
-    <li>Python</li>
-    <li>R</li>
-    <li>Excel</li>
-    <li>Data Analysis</li>
-    <li>Analytical Thinking</li>
-    <li>Critical Thinking</li>
-    <li>Problem Solving</li>
-  </ul>
-</section>
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python</li>
+      <li>R</li>
+      <li>Excel</li>
+      <li>Data Analysis</li>
+      <li>Analytical Thinking</li>
+      <li>Critical Thinking</li>
+      <li>Problem Solving</li>
+    </ul>
+  </section>
 
   <!-- Resume -->
   <section id="resume" data-aos="fade-up">
@@ -93,16 +97,15 @@
     <a href="Resume.pdf" download class="btn">📄 Download My Resume (PDF)</a>
   </section>
 
-<!-- Blog -->
+  <!-- Blog -->
   <section id="blog" data-aos="fade-up">
-  <h2>Blog</h2>
-  <article>
-    <h3>5 Steps I Took to Transition into Data Analytics</h3>
-    <p>After completing my M.Sc. in Biotechnology, I realized the potential of data science in biological research. I began by learning Python and R, followed by online certifications on Coursera and DataCamp...</p>
-    <a href="#">Read More</a>
-  </article>
-</section>
-
+    <h2>Blog</h2>
+    <article>
+      <h3>5 Steps I Took to Transition into Data Analytics</h3>
+      <p>After completing my M.Sc. in Biotechnology, I realized the potential of data science in biological research. I began by learning Python and R, followed by online certifications on Coursera and DataCamp...</p>
+      <a href="#">Read More</a>
+    </article>
+  </section>
 
   <!-- Timeline -->
   <section id="timeline" data-aos="fade-up">
@@ -110,19 +113,6 @@
     <ul>
       <li><strong>2024:</strong> Completed M.Sc. in Biotechnology</li>
     </ul>
-  </section>
-
-
-
-  <!-- Contact -->
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    </form>
-    <div>
-      <a href="mailto:sujithmp004@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/in/sujith-mp" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Stoicsujith" target="_blank">GitHub</a> |
-    </div>
   </section>
 
   <!-- Footer -->
