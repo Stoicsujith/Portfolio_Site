@@ -30,7 +30,7 @@ a:focus,
   color: #90caf9;
 }
 
-/* Header with Gradient */
+/* Header with Gradient and Parallax */
 header.parallax {
   background: linear-gradient(135deg, #ff00d4, #00ddff);
   color: white;
@@ -41,6 +41,7 @@ header.parallax {
   background-clip: padding-box;
   background-attachment: fixed;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 /* Header Contact Links */
