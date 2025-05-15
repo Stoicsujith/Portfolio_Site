@@ -98,4 +98,64 @@ section {
   gap: 20px;
   justify-content: center;
   background-color: #111;
-  padding:
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.certificates-container img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.certificates-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #00ddff;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #0099bb;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  background: #121212;
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .certificates-container {
+    justify-content: center;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
