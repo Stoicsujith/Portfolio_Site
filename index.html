@@ -13,6 +13,41 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Fixed top nav basic styling */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #121212;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      font-weight: 600;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #00ddff;
+      background: rgba(0, 221, 255, 0.1);
+    }
+    /* To offset the fixed nav height for section anchors */
+    section {
+      padding-top: 4.5rem;
+      margin-top: 3rem;
+    }
+  </style>
 
   <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -67,16 +102,14 @@
   <!-- Projects -->
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
-
-    <a href="G_Quadreplex.html" target="_blank" class="card hover-card project-link">
+    <div class="card hover-card">
       <h3>Genome Data Analysis</h3>
       <p>Identified bacterial DNA patterns using Python and R.</p>
-    </a>
-
-    <a href="https://github.com/Stoicsujith/Monkeypox-Research" target="_blank" rel="noopener noreferrer" class="card hover-card project-link">
+    </div>
+    <div class="card hover-card">
       <h3>Monkeypox Research Repository</h3>
-      <p>View the full project code and data on GitHub.</p>
-    </a>
+      <p><a href="https://github.com/Stoicsujith/Monkeypox-Research" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+    </div>
   </section>
 
   <!-- Certificates -->
@@ -103,16 +136,18 @@
     <h2>My Journey</h2>
     <ul>
       <li><strong>2024:</strong> Completed M.Sc. in Biotechnology</li>
+      <!-- Add more timeline items here -->
     </ul>
   </section>
 
   <!-- Blog -->
   <section id="blog" data-aos="fade-up">
     <h2>Blog</h2>
-    <p>Visit my full blog for latest posts and insights:</p>
-    <a href="https://yourblogsite.com" target="_blank" rel="noopener noreferrer" class="btn">
-      🌐 Visit My Blog
-    </a>
+    <article>
+      <h3>5 Steps I Took to Transition into Data Analytics</h3>
+      <p>After completing my M.Sc. in Biotechnology, I realized the potential of data science in biological research. I began by learning Python and R, followed by online certifications on Coursera and DataCamp...</p>
+      <a href="#">Read More</a>
+    </article>
   </section>
 
   <!-- Resume -->
