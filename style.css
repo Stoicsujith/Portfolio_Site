@@ -9,13 +9,41 @@ body {
   transition: background 0.4s, color 0.4s;
 }
 
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  font-weight: 600;
+  font-size: 1rem;
+}
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+nav a:hover,
+nav a.active {
+  color: #00ddff;
+  background: rgba(0, 221, 255, 0.1);
+}
+
 /* Header with Gradient */
 header.parallax {
   background: linear-gradient(135deg, #ff00d4, #00ddff);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px 60px; /* increased top padding to offset nav */
   position: relative;
+  margin-top: 3rem; /* small margin to separate from nav */
 }
 
 /* Header Contact Links */
@@ -23,6 +51,11 @@ header.parallax {
   margin: 0 10px;
   font-size: 1.1em;
   display: inline-block;
+  color: white;
+  transition: color 0.3s ease;
+}
+.header-contacts a:hover {
+  color: #00ddff;
 }
 
 /* Buttons and Links */
@@ -30,7 +63,6 @@ a {
   color: #00ddff;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -43,6 +75,7 @@ a:hover {
   border-radius: 6px;
   margin-top: 10px;
   transition: background 0.3s;
+  text-align: center;
 }
 
 .btn:hover {
@@ -54,21 +87,23 @@ section {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
+  padding-top: 3rem; /* space from fixed nav */
 }
 
 /* Hover Cards */
 .hover-card {
-  border: 1px solid #ddd;
+  border: 1px solid #444;
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
   margin: 10px 0;
   background: #111;
+  color: #e0e0e0;
 }
 
 .hover-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 221, 255, 0.3);
 }
 
 /* Certificates Gallery */
@@ -83,6 +118,7 @@ section {
   margin: 10px;
   border-radius: 8px;
   transition: transform 0.3s;
+  box-shadow: 0 0 8px rgba(0, 221, 255, 0.4);
 }
 
 .certificates-container img:hover {
@@ -132,6 +168,7 @@ section {
   border-left: 3px solid #00ddff;
   padding-left: 15px;
   position: relative;
+  color: #e0e0e0;
 }
 
 #timeline li::before {
@@ -156,11 +193,16 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
-  header {
-    padding: 60px 20px;
+  header.parallax {
+    padding: 80px 20px 40px;
   }
 
   .certificates-container img {
     max-width: 100%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
