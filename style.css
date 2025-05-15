@@ -90,27 +90,6 @@ section {
   transform: scale(1.05);
 }
 
-/* Skills */
-.skills-list {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.skills-list li {
-  display: flex;
-  align-items: center;
-  font-size: 1.1em;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 10px 15px;
-  border-radius: 8px;
-  min-width: 150px;
-}
-
-
-
 /* Blog */
 #blog ul {
   list-style: none;
